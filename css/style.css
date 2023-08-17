@@ -1,0 +1,64 @@
+:root {
+    --background_color: #272b30;
+    --white_color: #ffffff;
+    --main_color: #3A497B;
+    --badge_color: #32383e;
+    --active_link: #09c;
+}
+
+body {
+    background-color: var(--background_color);
+    font-family: 'Comfortaa', cursive;
+}
+
+a {
+    color: var(--white_color) !important;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.active a {
+    color: var(--active_link) !important
+}
+
+/* *************Header**************** */
+header {
+    height: 30vh
+}
+
+/* *************NAVBAR**************** */
+nav {
+    margin-top: -30px;
+    background-color: var(--main_color);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 70%);
+}
+
+nav .container img {
+    max-width: 30px
+}
+
+nav li {
+    transition: color 1s;
+}
+
+nav li:hover a {
+    color: var(--active_link) !important
+}
+
+/* ****************MAIN************ */
+
+.movies_list .card {
+    filter: grayscale(0.7);
+    transition: transform 0.5s, filter 0.5s 0.2s
+}
+
+.movies_list .card:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+.card .card-footer .badge {
+    background-color: var(--badge_color)
+}
