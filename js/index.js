@@ -38,9 +38,7 @@ class Ui {
      */
 
     games_row.innerHTML = games_cards.join("");
-    document
-      .querySelector("#container")
-      .appendChild(games_row);
+    document.querySelector("#container").appendChild(games_row);
   }
 }
 
@@ -99,13 +97,11 @@ async function displayGames(category) {
 })();
 
 displayGames(activated_category);
-
-(function () {
-  console.log(document.querySelectorAll(".card"));
-  // Open game-details
-  for (let i = 0; i < game_cards.length; i++) {
-    game_cards[i].addEventListener("click", function (e) {
-      console.log(e.target.getAttribute("data-id"));
-    });
-  }
-})();
+console.log("cards",document.querySelectorAll(".card"));
+// Open game-details
+for (let i = 0; i < game_cards.length; i++) {
+  // console.log(document.querySelectorAll(".card"));
+  game_cards[i].addEventListener("click", function (e) {
+    console.log(e.target.getAttribute("data-id"));
+  });
+}
